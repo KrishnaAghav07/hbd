@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Bala 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffc0cb, #ffe4e1);
+      color: #800000;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: 0.5em;
+      animation: fadeInDown 2s ease-out;
+    }
+    p {
+      font-size: 1.5em;
+      margin: 20px;
+      animation: fadeInUp 2s ease-out;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 250px;
+      height: auto;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hearts {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 6s infinite ease-in;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px; left: 0;
+    }
+    .heart::after {
+      left: -10px; top: 0;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 70%; animation-delay: 3s;"></div>
+    <div class="heart" style="left: 90%; animation-delay: 4s;"></div>
+  </div>
+  <h1>Happy Birthday Bala 🎉</h1>
+  <p>My sweetest <strong>Pagal</strong> and cutest <strong>Mand</strong>, you light up my life like no one else. <br/>
+     You make everything feel so magical just by being yourself. <br/>
+     I’m so lucky to call you mine. Here's something special for your big day, from your <strong>Raja</strong> 💖</p>
+
+  <audio controls autoplay loop>
+    <source src="aankhon-se-batana.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="gallery">
+    <img src="img1.jpg" alt="Photo 1"/>
+    <img src="img2.jpg" alt="Photo 2"/>
+    <img src="img3.jpg" alt="Photo 3"/>
+    <img src="img4.jpg" alt="Photo 4"/>
+    <img src="img5.jpg" alt="Photo 5"/>
+    <img src="img6.jpg" alt="Photo 6"/>
+    <img src="img7.jpg" alt="Photo 7"/>
+    <img src="img8.jpg" alt="Photo 8"/>
+  </div>
+</body>
+</html>
